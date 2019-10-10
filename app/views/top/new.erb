@@ -3,9 +3,6 @@
     <h2>ゴルファー同士が気軽に繋がるSNS</h2>
     <p>今日はどこに行こうか</p>
   </div>
-  <%= form_for(resource, url: top_path) do |f| %>
-  <%= f.email_field :email, autofocus: true %>
-  <%= f.password_field :password %>
-  <%= f.button 'ログイン' , type: 'submit'%>
-  <% end %>       
+<%= link_to 'login',new_user_session_path %>
+<%= link_to 'signup',new_user_registration_path %>
 </div>

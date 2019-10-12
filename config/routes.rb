@@ -15,10 +15,12 @@ get '/top', to: 'top#new'
 post '/top', to: 'top#create'
 end
 
-get "/rankings" => "rankings#home"
+get "/rankings" => "rankings#index"
 
 resources :users, only: [:show, :edit, :update] do
 end
+
+root 'rankings#index'
 
 # #Administrators::~~DeviseController
 #  devise_for :admins, controllers: {

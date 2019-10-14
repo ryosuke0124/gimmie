@@ -8,7 +8,7 @@
     <nav>
       <ul class="nav navbar-nav navbar-right navbar-original">
           <li class="header-li"><%= link_to " MYpage", user_path(current_user) ,:style=>"color:white;" %></li>
-          <li class="header-li"><%= link_to " Home", '/'%></li>
+          <li class="header-li"><%= link_to " Home", '/' ,:style=>"color:white;"%></li>
           <li class="header-li"><%= link_to " About", abouts_path,:style=>"color:white;" %></li>
           <li class="header-li"><%= link_to " Logout", destroy_user_session_path, method: :delete ,:style=>"color:white;" %></li>
           <li style="padding-top: 15px; padding-left: 15px;">

@@ -18,6 +18,7 @@ ActiveRecord::Schema.define(version: 2019_10_10_082320) do
     t.string "reset_password_token"
     t.datetime "reset_password_sent_at"
     t.datetime "remember_created_at"
+    t.string "name"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.index ["email"], name: "index_admins_on_email", unique: true
@@ -66,7 +67,9 @@ ActiveRecord::Schema.define(version: 2019_10_10_082320) do
     t.datetime "last_sign_in_at"
     t.string "current_sign_in_ip"
     t.string "last_sign_in_ip"
+    t.integer "is_delete", default: 0, null: false
     t.string "name"
+    t.text "profile_image_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.index ["email"], name: "index_users_on_email", unique: true

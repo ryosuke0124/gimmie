@@ -7,6 +7,6 @@ class User < ApplicationRecord
   attachment :profile_image
   validates :is_delete, presence: true
 
-  enum is_delete: {  exist: 0, remove: 1 }
+  acts_as_paranoid
   
 end

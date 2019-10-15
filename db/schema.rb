@@ -44,6 +44,7 @@ ActiveRecord::Schema.define(version: 2019_10_10_082320) do
     t.string "address"
     t.string "access"
     t.text "detail"
+    t.integer "variation"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
@@ -72,6 +73,7 @@ ActiveRecord::Schema.define(version: 2019_10_10_082320) do
     t.text "profile_image_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.datetime "deleted_at"
     t.index ["email"], name: "index_users_on_email", unique: true
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
   end

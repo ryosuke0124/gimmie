@@ -15,14 +15,23 @@ get '/top', to: 'top#new'
 post '/top', to: 'top#create'
 end
 
-get "/rankings" => "rankings#index"
-root 'rankings#index'
-
 resources :users, only: [:show, :edit, :update] do
 end
 
+get "/places" => "places#index"
+root "places#index"
+
 get "/abouts" => "abouts#index"
 root "abouts#index"
+
+get "/courses" => "courses#index"
+root  "courses#index"
+
+get "/driving_ranges" => "driving_ranges#index"
+root  "driving#index"
+
+get "/shops" => "shops#index"
+root  "shops#index"
 
 # #Administrators::~~DeviseController
 #  devise_for :admins, controllers: {

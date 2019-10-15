@@ -5,7 +5,7 @@ class CreatePlaces < ActiveRecord::Migration[5.2]
       t.string :address
       t.string :access
       t.text :detail
-
+      t.integer :variation
 
       t.timestamps
     end

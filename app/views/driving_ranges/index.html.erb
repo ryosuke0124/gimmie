@@ -1,1 +1,11 @@
-<p>練習場ランキング一覧</p>
+<%= link_to "練習場ランキング一覧", driving_ranges_path , :style=>"color:black;"%>
+ <p>
+   <% Place.where(variation: 1).each do |place| %>
+     <%= link_to places_path(place.id) do%>
+       <%= place.name %>
+       <%= place.address %>
+       <%= place.access %>
+       <%= place.detail %>
+       <% end %>
+    <% end %>
+  </p>

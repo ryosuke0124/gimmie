@@ -1,1 +1,11 @@
-<p>ゴルフショップランキング一覧</p>
+<%= link_to "ゴルフショップランキング一覧", shops_path , :style=>"color:black;"%>
+ <p>
+   <% Place.where(variation: 2).each do |place| %>
+     <%= link_to places_path(place.id) do%>
+       <%= place.name %>
+       <%= place.address %>
+       <%= place.access %>
+       <%= place.detail %>
+       <% end %>
+      <% end %>
+  </p>

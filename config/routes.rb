@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  resources :relationships, only: [:create, :destroy]
+
   # devise_for :users
   devise_for :admins, controllers: {
   sessions: 'admins/sessions',
@@ -18,6 +20,13 @@ end
 resources :users, only: [:show, :edit, :update] do
 end
 
+resources :users do
+  member do
+    get :following
+    get :followers
+  end
+end
+
 get "/places" => "places#index"
 root "places#index"
 
@@ -32,6 +41,8 @@ root  "driving#index"
 
 get "/shops" => "shops#index"
 root  "shops#index"
+
+root 'user#index'
 
 # #Administrators::~~DeviseController
 #  devise_for :admins, controllers: {

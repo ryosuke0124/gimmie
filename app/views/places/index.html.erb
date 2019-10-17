@@ -17,10 +17,16 @@
       <p>
         <% Place.where(variation: 0).each do |place| %>
          <%= link_to places_path(place.id) do%>
-           <%= place.name %>
-           <%= place.address %>
-           <%= place.access %>
-           <%= place.detail %>
+           <table class="table">
+            <tr>
+             <th><%= place.name %></th>
+             <th><%= place.address %></th>
+             <th><%= place.access %></th>
+             <th><%= place.detail %></th>
+             <iframe src="https://maps.google.co.jp/maps?output=embed&q=<%= place.address %>">
+</iframe>
+            </tr>
+           </table>
            <% end %>
          <% end %>
       </p>
@@ -30,12 +36,18 @@
        <p>
          <% Place.where(variation: 1).each do |place| %>
            <%= link_to places_path(place.id) do%>
-             <%= place.name %>
-             <%= place.address %>
-             <%= place.access %>
-             <%= place.detail %>
-             <% end %>
+            <table class="table">
+             <tr>
+              <th><%= place.name %></th>
+              <th><%= place.address %></th>
+              <th><%= place.access %></th>
+              <th><%= place.detail %></th>
+              <iframe src="https://maps.google.co.jp/maps?output=embed&q=<%= place.address %>">
+</iframe>
+             </tr>
+            </table> 
             <% end %>
+          <% end %>
         </p>
     </div>
     <div class="tab-pane" id="tab_c" role="tabpanel">
@@ -43,10 +55,16 @@
          <p>
            <% Place.where(variation: 2).each do |place| %>
              <%= link_to places_path(place.id) do%>
-               <%= place.name %>
-               <%= place.address %>
-               <%= place.access %>
-               <%= place.detail %>
+               <table class="table">
+                <tr>
+                 <th><%= place.name %></th>
+                 <th><%= place.address %></th>
+                 <th><%= place.access %></th>
+                 <th><%= place.detail %></th>
+                 <iframe src="https://maps.google.co.jp/maps?output=embed&q=<%= place.address %>">
+</iframe>
+                </tr>
+               </table>
               <% end %>
             <% end %>
          </p>

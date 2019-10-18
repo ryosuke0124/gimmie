@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  resources :posts
   resources :relationships, only: [:create, :destroy]
 
   # devise_for :users
@@ -43,6 +44,14 @@ get "/shops" => "shops#index"
 root  "shops#index"
 
 root 'user#index'
+
+root "posts#index"
+resources :posts do
+  resources :likes
+end
+
+get 'places/:id' => 'places#show', as: 'place'
+root 'courses#show'
 
 # #Administrators::~~DeviseController
 #  devise_for :admins, controllers: {

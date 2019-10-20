@@ -28,7 +28,11 @@ resources :users do
   end
 end
 
-get "/places" => "places#index"
+#get "/places" => "places#index"
+#get 'places/:id' => 'places#show'
+
+resources :places, :only => [:index, :show]
+
 root "places#index"
 
 get "/abouts" => "abouts#index"
@@ -46,12 +50,10 @@ root  "shops#index"
 root 'user#index'
 
 root "posts#index"
-resources :posts do
+resources :places do
   resources :likes
 end
 
-get 'places/:id' => 'places#show', as: 'place'
-root 'courses#show'
 
 # #Administrators::~~DeviseController
 #  devise_for :admins, controllers: {

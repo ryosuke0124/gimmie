@@ -22,7 +22,9 @@ class User < ApplicationRecord
   has_many :likes
   
   def follow(other_user)
-    following << other_user
+    unless self == other_user
+      self.active_relationships.find_or_create_by(followed_id: other_user.id)
+    end
   end
 
   def unfollow(other_user)

@@ -1,7 +1,7 @@
 <%= link_to "コース場ランキング一覧", courses_path , :style=>"color:black;"%>
   <p>
    <% Place.where(variation: 0).each do |place| %>
-     <%= link_to places_path(place.id) do%>
+     <%= link_to place_path(place.id) do%>
       <table class="table">
             <tr>
              <th><%= place.name %></th>

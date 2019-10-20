@@ -63,7 +63,6 @@ ActiveRecord::Schema.define(version: 2019_10_18_084958) do
     t.integer "followed_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.index [nil, nil], name: "index_relationships_on_follwer_id_and_follwed_id", unique: true
     t.index [nil], name: "index_relationships_on_follwed_id"
     t.index [nil], name: "index_relationships_on_follwer_id"
   end

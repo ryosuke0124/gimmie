@@ -1,24 +1,22 @@
-<body>
-     <header class="navbar navbar-inverse navbar-position">
+<header class="navbar navbar-inverse navbar-position">
   <div class="container">
-    <nav class='nav navbar-nav navbar-left' >
-      <h2><%= link_to " gimmie ", root_path,:style=>"color:white;"%></h2>
-      <span class="text-right text-muted" style="color:white"><%= current_user.name %> さんようこそ</span>
-    </nav>
-    <nav>
-      <ul class="nav navbar-nav navbar-right navbar-original">
-          <li class="header-li"><%= link_to " MYpage", user_path(current_user) ,:style=>"color:white;" %></li>
-          <li class="header-li"><%= link_to " Home", '/' ,:style=>"color:white;"%></li>
-          <li class="header-li"><%= link_to " About", abouts_path,:style=>"color:white;" %></li>
-          <li class="header-li"><%= link_to " Logout", destroy_user_session_path, method: :delete ,:style=>"color:white;" %></li>
-          <li style="padding-top: 15px; padding-left: 15px;">
-           <%#= search_form_for @search, url:  do |f| %>
-            <%#= f.text_field :item_name_cont, placeholder: '利用シーンを選択...' %>
-            <%#= f.submit ("検索する") %>
-            <%# end %>
-           </li>
-      </ul>
-    </nav>
+  <nav class='nav navbar-nav navbar-left' >
+    <h2><%= link_to " gimmie ", root_path,:style=>"color:white;"%></h2>
+    <span class="text-right text-muted" style="color:white"><%= current_user.name %> さんようこそ</span>
+  </nav>
+  <nav>
+    <ul class="nav navbar-nav navbar-right navbar-original">
+      <li class="header-li"><%= link_to " MYpage", user_path(current_user) ,:style=>"color:white;" %></li>
+      <li class="header-li"><%= link_to " Home", '/' ,:style=>"color:white;"%></li>
+      <li class="header-li"><%= link_to " About", abouts_path,:style=>"color:white;" %></li>
+      <li class="header-li"><%= link_to " Logout", destroy_user_session_path, method: :delete ,:style=>"color:white;" %></li>
+      <li style="padding-top: 15px; padding-left: 15px;">
+      <%#= search_form_for @search, url:  do |f| %>
+      <%#= f.text_field :item_name_cont, placeholder: '利用シーンを選択...' %>
+      <%#= f.submit ("検索する") %>
+      <%# end %>
+      </li>
+    </ul>
+  </nav>
   </div>
 </header>
-</body>

@@ -1,4 +1,4 @@
-<%= link_to "ゴルフショップランキング一覧", shops_path , :style=>"color:black;"%>
+<%= link_to "ゴルフショップ一覧", shops_path , :style=>"color:black;"%>
  <p>
    <% Place.where(variation: 2).each do |place| %>
      <%= link_to places_path(place.id) do%>

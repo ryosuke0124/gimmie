@@ -23,7 +23,10 @@ class UsersController < ApplicationController
     @users = @user.followers
     render 'show_follower'
   end
-
+  def likes
+    @user = current_user
+    @likes = @user.likes
+  end
   private
    def user_params
     params.require(:user).permit(:email, :encrypted_password, :profile_image_id)

@@ -22,6 +22,7 @@ resources :users, only: [:show, :edit, :update] do
 end
 
 resources :users do
+  get '/likes' => 'users#likes'
   member do
     get :following
     get :followers

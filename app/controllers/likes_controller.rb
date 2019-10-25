@@ -16,6 +16,10 @@ class LikesController < ApplicationController
     redirect_to place_path(@place)
   end
 
+  def index
+    Place.where(user_id: current_user.id, like_place_id:params[:place_id])
+  end
+
   private
     def liked?
       Like.where(user_id: current_user.id, place_id:params[:place_id]).exists?

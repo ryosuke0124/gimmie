@@ -1,0 +1,13 @@
+        <% @likes.each do |like| %>
+          <% if like.place.variation == 'course' %>
+            <%= link_to place_likes_path(like.place.id) do%>
+              <table class="table">
+                <tr>
+                  <th><%= like.place.name %></th>
+                  <th><%= like.place.access %></th>
+                  <iframe src="https://maps.google.co.jp/maps?output=embed&q=<%= like.place.address %>"></iframe>
+                </tr>
+              </table>
+            <% end %>
+          <% end %>
+        <% end %>

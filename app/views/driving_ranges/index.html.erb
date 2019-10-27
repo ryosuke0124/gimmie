@@ -1,0 +1,15 @@
+<%= link_to "練習場一覧", driving_ranges_path , :style=>"color:black;"%>
+ <p>
+   <% Place.where(variation: 1).each do |place| %>
+     <%= link_to places_path(place.id) do%>
+       <table class="table">
+            <tr>
+             <th><%= place.name %></th>
+             <th><%= place.access %></th>
+             <iframe src="https://maps.google.co.jp/maps?output=embed&q=<%= place.address %>">
+</iframe>
+            </tr>
+           </table>
+       <% end %>
+    <% end %>
+  </p>

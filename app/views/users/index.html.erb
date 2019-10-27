@@ -1,0 +1,8 @@
+<h1>ユーザー  一覧</h1>
+<ul>
+ <% @users.each do |user| %>
+  <li>
+   <%= link_to "#{user.email.split('@')[0]}", user_path(user) %>
+  </li>
+ <% end %>
+</ul>

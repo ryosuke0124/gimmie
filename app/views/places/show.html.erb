@@ -1,0 +1,14 @@
+<h2>コース名</h2>
+<p><%= @place.name %></p>
+<h2>詳細</h2>
+<iframe src="https://maps.google.co.jp/maps?output=embed&q=<%= @place.address %>">
+</iframe>
+<p><%= @place.access %></p>
+<p><%= @place.detail %></p>
+
+<%= @place.likes.count %>いいね
+<% if current_user.likes.where(place_id: @place).present? %>
+  <%= button_to 'Unlike', place_like_path(@place), method: :delete %>
+<% else %>
+  <%= button_to 'Like', place_likes_path(@place), method: :post %>
+<% end %>

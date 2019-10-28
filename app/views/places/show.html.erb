@@ -7,6 +7,7 @@
 <p><%= @place.detail %></p>
 
 <%= @place.likes.count %>いいね
+
 <% if current_user.likes.where(place_id: @place).present? %>
   <%= button_to 'Unlike', place_like_path(@place), method: :delete %>
 <% else %>

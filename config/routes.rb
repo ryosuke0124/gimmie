@@ -39,14 +39,9 @@ root "places#index"
 get "/abouts" => "abouts#index"
 root "abouts#index"
 
-get "/courses" => "courses#index"
-root  "courses#index"
-
-get "/driving_ranges" => "driving_ranges#index"
-root  "driving#index"
-
-get "/shops" => "shops#index"
-root  "shops#index"
+get "/mycourse"  => "courses#index", as: "mycourse"
+get "/mydriving" => "driving_ranges#index", as: "mydriving_ranges"
+get "/myshop" => "shops#index", as: "myshop"
 
 root 'user#index'
 

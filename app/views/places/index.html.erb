@@ -13,7 +13,7 @@
   </ul>
   <div class="tab-content">
     <div class="tab-pane active" id="tab_a" role="tabpanel">
-     <%= link_to "コース場ランキング一覧", courses_path , :style=>"color:black;"%>
+     <%= link_to "コース場ランキング一覧", mycourse_path , :style=>"color:black;"%>
       <div class="field">
         <% @places1.each do |place| %>
           <% if place.variation == 'course' %>
@@ -32,7 +32,7 @@
     </div>
 
     <div class="tab-pane" id="tab_b" role="tabpanel">
-      <%= link_to "練習場ランキング一覧", driving_ranges_path , :style=>"color:black;"%>
+      <%= link_to "練習場ランキング一覧", mydriving_ranges_path , :style=>"color:black;"%>
         <div class="field">
             <% @places2.each do |place| %>
               <% if place.variation == 'driving_range' %>
@@ -51,7 +51,7 @@
       </div>
 
     <div class="tab-pane" id="tab_c" role="tabpanel">
-      <%= link_to "ゴルフショップランキング一覧", shops_path , :style=>"color:black;"%>
+      <%= link_to "ゴルフショップランキング一覧", myshop_path , :style=>"color:black;"%>
           <div class="field">
             <% @places3.each do |place| %>
               <% if place.variation == 'shop' %>

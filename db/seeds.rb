@@ -149,41 +149,45 @@ Place.create({
 })
 
 Place.create({
-  name: "",
-  address: "",
-  access: "",
-  detail: "",
+  name: "Victoria 本店",
+  address: "東京都千代田区神田小川町3-4",
+  access: "東京メトロ千代田線「新御茶ノ水駅」
+都営新宿線「小川町駅」
+徒歩5分",
+  detail: "11:00-20：00",
   variation: Place.variations[:shop],
 })
 
 Place.create({
-  name: "",
-  address: "",
-  access: "",
-  detail: "",
+  name: "Victoria Golf 新宿店",
+  address: "東京都新宿区新宿4-1-10",
+  access: "R新宿駅東南口ご利用（徒歩２分）
+出口正面の階段・エスカレーターを降り、右手の甲州街道ガード下を抜けてすぐ。",
+  detail: "10：30-20：00",
   variation: Place.variations[:shop],
 })
 
 Place.create({
-  name: "",
-  address: "",
-  access: "",
-  detail: "",
+  name: "Victoria 蒲田店",
+  address: "東京都大田区蒲田5-47-7 マルエツかまた店 4F",
+  access: "JR蒲田駅(東口)　徒歩7分
+大田区役所入口交差点すぐ",
+  detail: "10：30-20：00",
   variation: Place.variations[:shop],
 })
 
 Place.create({
-  name: "",
-  address: "",
-  access: "",
-  detail: "",
+  name: "Victoria Golf 世田谷店",
+  address: "東京都世田谷区八幡山3-39-5",
+  access: "京王線八幡山駅より徒歩５分",
+  detail: "10：00～20：00",
   variation: Place.variations[:shop],
 })
 
 Place.create({
-  name: "",
-  address: "",
-  access: "",
-  detail: "",
+  name: "L-Breath 御茶ノ水店",
+  address: "東京都千代田区神田小川町2-4-14",
+  access: "東京メトロ千代田線「新御茶ノ水駅」徒歩5分",
+  detail: "11:00-20:00",
   variation: Place.variations[:shop],
 })

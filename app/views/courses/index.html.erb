@@ -1,15 +1,16 @@
-<%= link_to "コース場一覧", courses_path , :style=>"color:black;"%>
-  <div>
-   <% Place.where(variation: 0).each do |place| %>
-     <%= link_to place_path(place.id) do%>
-      <table class="table">
-            <tr>
-             <th><%= place.name %></th>
-             <th><%= place.access %></th>
-             <iframe src="https://maps.google.co.jp/maps?output=embed&q=<%= place.address %>">
-</iframe>
-            </tr>
-           </table>
-       <% end %>
+<%= link_to "コース場一覧", mycourse_path , :style=>"color:black;"%>
+<div>
+  <% current_user.likes.each do |like| %>
+    <% if like.place.variation == 'course' %>
+      <%= link_to place_path(like.place.id) do%>
+        <table class="table">
+          <tr>
+            <th><%= like.place.name %></th>
+            <th><%= like.place.access %></th>
+            <iframe src="https://maps.google.co.jp/maps?output=embed&q=<%= like.place.address %>"></iframe>
+          </tr>
+        </table>
       <% end %>
-  </div>
+    <% end %>
+  <% end %>
+</div>

@@ -1,5 +1,5 @@
 <%= link_to "コース場一覧", courses_path , :style=>"color:black;"%>
-  <p>
+  <div>
    <% Place.where(variation: 0).each do |place| %>
      <%= link_to place_path(place.id) do%>
       <table class="table">
@@ -12,4 +12,4 @@
            </table>
        <% end %>
       <% end %>
-  </p>
+  </div>

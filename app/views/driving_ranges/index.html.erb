@@ -1,5 +1,5 @@
 <%= link_to "練習場一覧", driving_ranges_path , :style=>"color:black;"%>
- <p>
+ <div>
    <% Place.where(variation: 1).each do |place| %>
      <%= link_to places_path(place.id) do%>
        <table class="table">
@@ -12,4 +12,4 @@
            </table>
        <% end %>
     <% end %>
-  </p>
+  </div>
